@@ -1,0 +1,6 @@
+# ห้ามขึ้น GitHub: ข้อมูลล็อกอิน / คุกกี้ / โปรไฟล์เบราว์เซอร์
+.env
+*cookies*.json
+browser_profile/
+__pycache__/
+*.pyc
