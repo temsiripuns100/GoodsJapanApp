@@ -4,7 +4,7 @@
  * - CSS / JS / รูป: ใช้ของในเครื่องก่อน แล้วอัปเดตเบื้องหลัง
  * เวลาแก้ไฟล์เว็บแล้วอยากให้แอปโหลดของใหม่ทันที ให้เปลี่ยนเลข VERSION ด้านล่าง
  */
-const VERSION = 'gj-v1-2026-10-29';
+const VERSION = 'gj-v2-2026-10-29';
 const CORE_CACHE = `${VERSION}-core`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 

@@ -157,7 +157,7 @@ function renderProductCard(p) {
                         <span class="product-price">฿${p.price.toLocaleString()}</span>
                         <span class="product-price-old">฿${p.originalPrice.toLocaleString()}</span>
                     </div>
-                    <a href="https://line.me/ti/p/~@goodsjapan" target="_blank" class="btn-inquire">ทักสอบถาม 💬</a>
+                    <a href="https://www.facebook.com/profile.php?id=61595247456619" target="_blank" rel="noopener" class="btn-inquire">ทักเพจสอบถาม 💬</a>
                 </div>
             </div>
         </div>
