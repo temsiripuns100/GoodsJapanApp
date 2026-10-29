@@ -2,11 +2,13 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เกี่ยวกับเรา - Goods Japan (กูดส์ เจแปน)</title>
-    <meta name="description" content="เรื่องราวของ Goods Japan ร้านมือสองญี่ปุ่นคุณภาพดี สภาพดี มีเรื่องราว ในปั๊ม ปตท. คลอง 4 ปทุมธานี">
-    <meta property="og:title" content="เกี่ยวกับเรา - Goods Japan">
-    <meta property="og:image" content="assets/images/poster.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>เกี่ยวกับเรา | Goods Japan คลองสี่</title>
+    <meta name="description" content="Goods Japan ร้านของมือสองจากญี่ปุ่น คลองสี่ ปทุมธานี คัดทีละชิ้น ตั้งราคาโดยเทียบราคาที่ขายได้จริงในญี่ปุ่น">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="เกี่ยวกับเรา | Goods Japan คลองสี่">
+    <meta property="og:description" content="Goods Japan ร้านของมือสองจากญี่ปุ่น คลองสี่ ปทุมธานี คัดทีละชิ้น ตั้งราคาโดยเทียบราคาที่ขายได้จริงในญี่ปุ่น">
+    <meta property="og:image" content="assets/images/og-cover.jpg">
     <link rel="icon" href="assets/images/logo.png">
     <!-- PWA: ติดตั้งเป็นแอปบนมือถือ -->
     <link rel="manifest" href="manifest.webmanifest">
@@ -16,175 +18,82 @@
     <meta name="apple-mobile-web-app-title" content="Goods Japan">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&family=Noto+Serif+Thai:wght@600;700&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container container">
-                <div class="logo-container">
-                    <a href="index.html">
-                        <img src="assets/images/logo.png" alt="Goods Japan Logo" class="logo-img">
-                        <span style="font-weight: 800; color: var(--jp-navy); font-size: 1.15rem; letter-spacing: -0.02em;">GOODS JAPAN</span>
-                    </a>
-                </div>
-                <button class="hamburger" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
-                    <li><a href="shop.html" class="nav-link">ร้านค้า</a></li>
-                    <li><a href="promotions.html" class="nav-link">โปรโมชั่น</a></li>
-                    <li><a href="location.html" class="nav-link">ที่ตั้งร้าน</a></li>
-                    <li><a href="about.html" class="nav-link active">เกี่ยวกับเรา</a></li>
-                </ul>
-            </div>
-        </nav>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="index.html">
+                <img src="assets/icons/icon-192.png" alt="" width="40" height="40">
+                <span><b>GOODS JAPAN</b><small>ของมือสองญี่ปุ่น · คลองสี่</small></span>
+            </a>
+            <button class="menu-btn" type="button" aria-label="เมนู" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+            <ul class="nav" id="site-nav"><li><a href="index.html">หน้าแรก</a></li><li><a href="shop.html">สินค้า</a></li><li><a href="promotions.html">โปรเปิดร้าน</a></li><li><a href="location.html">ที่ตั้งร้าน</a></li><li><a href="about.html" aria-current="page">เกี่ยวกับเรา</a></li></ul>
+        </div>
     </header>
 
     <main>
-        <section class="about-section section fade-in">
-            <div class="container">
-                <h1 class="section-title">เรื่องราวของ Goods Japan 👋</h1>
-                <p class="section-subtitle">ของดีจากญี่ปุ่น สภาพดี มีเรื่องราว | 日本の中古品店</p>
-
-                <div class="story-section" style="display: flex; flex-wrap: wrap; gap: 40px; margin-top: 40px; align-items: center;">
-                    <div class="story-content" style="flex: 1; min-width: 300px;">
-                        <h2 style="font-size: 1.4rem; color: var(--jp-navy); margin-bottom: 15px;">ส่งต่อคุณค่าและเสน่ห์ของมือสองญี่ปุ่นแท้</h2>
-                        <p style="margin-bottom: 15px; line-height: 1.8; color: var(--jp-gray-text);">
-                            <strong>Goods Japan (กูดส์ เจแปน)</strong> เกิดขึ้นจากความหลงใหลในความประณีต ดีไซน์ และคุณภาพของสินค้าญี่ปุ่น 
-                            เรานำเข้าสินค้าคัดเกรดโดยตรงจากประเทศญี่ปุ่น ไม่ว่าจะเป็นเซรามิก Arita/Tachikichi งานครัวทนทาน 
-                            อุปกรณ์แคมป์ปิ้ง Snow Peak / Coleman อุปกรณ์ตกปลา Shimano และของสะสมวินเทจ
-                        </p>
-                        <p style="margin-bottom: 15px; line-height: 1.8; color: var(--jp-gray-text);">
-                            เรายึดหลัก <strong>"Regenerating Value"</strong> (การฟื้นคืนคุณค่าสินค้า) ด้วยการทำความสะอาด ตรวจสอบสภาพ และคัดสรรอย่างพิถีพิถัน 
-                            เพื่อให้คนไทยได้ของใช้คุณภาพดีในราคาประหยัดกว่ามือหนึ่ง 50–80% เหมาะอย่างยิ่งสำหรับผู้ที่เพิ่งซื้อบ้านใหม่ในย่านคลอง 4 
-                            คนรักกิจกรรมกลางแจ้ง และผู้ที่ชื่นชอบของสะสมที่มีเอกลักษณ์
-                        </p>
-                        <p style="line-height: 1.8; color: var(--jp-gray-text);">
-                            หน้าร้านของเราตั้งอยู่ใน <strong>สถานีบริการน้ำมัน ปตท. คลอง 4</strong> ในบรรยากาศ Open Air เปิดโล่ง เป็นมิตร สบายใจ 
-                            ให้ทุกคนสามารถแวะเข้ามาคุ้ยหาของโปรดได้ตั้งแต่ 09:00 จนถึง 21:00 น.
-                        </p>
-                    </div>
-                    <div class="story-image" style="flex: 1; min-width: 300px;">
-                        <img src="assets/images/poster.jpg" alt="Goods Japan Story" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+        <section class="shop-head">
+            <div class="wrap">
+                <h1>เกี่ยวกับ Goods Japan</h1>
+                <p class="jp" style="color:var(--gold)">日本の中古品 · ของมือสองจากญี่ปุ่น</p>
+            </div>
+        </section>
+        <section class="section" style="padding-top:20px">
+            <div class="wrap split">
+                <div class="prose">
+                    <p><b>Goods Japan (กูดส์ เจแปน)</b> คือร้านของมือสองจากญี่ปุ่นใน PTT Station ปตท. เลียบคลองสี่ ปทุมธานี เราแกะของ คัด และทำรายการทีละชิ้น ทุกชิ้นมีรหัสสินค้าและราคาติดไว้ ดูบนเว็บได้ก่อนมาร้าน</p>
+                    <p>ก่อนตั้งราคา เราเทียบกับราคาที่ของรุ่นเดียวกันขายได้จริงในญี่ปุ่น เช่นบน Mercari และ Yahoo! Auctions แล้วตั้งราคาให้เหมาะกับลูกค้าในไทย ของราคาเบา ๆ เริ่มต้นหลักสิบบาท</p>
+                    <p>ของทุกชิ้นเป็นของมือสอง และส่วนใหญ่มีชิ้นเดียว บางชิ้นอาจมีรอยตามการใช้งาน แนะนำให้มาดูของจริงที่ร้าน หรือทักเพจขอรูปเพิ่มก่อนตัดสินใจได้เสมอ</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px">
+                        <a class="btn btn-red" href="shop.html">ดูสินค้าในร้าน</a>
+                        <a class="btn btn-ghost" href="https://www.facebook.com/profile.php?id=61595247456619" target="_blank" rel="noopener">ทักเพจ Facebook</a>
                     </div>
                 </div>
-
-                <div class="torii-divider" style="margin: 60px auto;"></div>
-
-                <h2 class="section-title">ค่านิยมและความมุ่งมั่นของเรา</h2>
-                <p class="section-subtitle">มาตรฐานการคัดสรรและการบริการของ Goods Japan</p>
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <div class="feature-icon">🎌</div>
-                        <h3 class="feature-title">ของแท้จากญี่ปุ่น 100%</h3>
-                        <p class="feature-desc">คัดเกรดจากตู้คอนเทนเนอร์ญี่ปุ่นแท้ มีตราประทับและแหล่งผลิตชัดเจน</p>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">✨</div>
-                        <h3 class="feature-title">ทำความสะอาดก่อนวางขาย</h3>
-                        <p class="feature-desc">เช็ด ล้าง คัดแยก ตรวจสอบตำหนิอย่างซื่อสัตย์ ลูกค้าซื้อได้อย่างสบายใจ</p>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🌱</div>
-                        <h3 class="feature-title">เศรษฐกิจหมุนเวียน (Circular)</h3>
-                        <p class="feature-desc">ส่งต่อสิ่งของดีๆ ให้ได้ใช้งานต่อ ลดขยะ รักษ์สิ่งแวดล้อมอย่างยั่งยืน</p>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🤝</div>
-                        <h3 class="feature-title">ชุมชนคนรักญี่ปุ่น</h3>
-                        <p class="feature-desc">เป็นจุดพบปะ แลกเปลี่ยน และพูดคุยเรื่องของสะสม แคมป์ปิ้ง และงานบ้าน</p>
-                    </div>
-                </div>
-
-                <div class="torii-divider" style="margin: 60px auto;"></div>
-
-                <!-- Contact Form Section -->
-                <div style="max-width: 620px; margin: 0 auto; background: white; padding: 35px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--jp-border);">
-                    <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 8px;">ส่งข้อความถึงเรา ✉️</h2>
-                    <p style="text-align: center; font-size: 0.9rem; color: var(--jp-gray-text); margin-bottom: 25px;">
-                        สอบถามสินค้า สั่งซื้อยกล็อต หรือปรึกษาข้อมูลหน้าร้านได้เลยครับ
-                    </p>
-                    <form class="contact-form" action="#" method="POST">
-                        <div style="margin-bottom: 18px;">
-                            <label for="name" style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.9rem; color: var(--jp-navy);">ชื่อ-นามสกุล / ชื่อผู้ติดต่อ</label>
-                            <input type="text" id="name" class="form-input" placeholder="คุณสมชาย..." required>
-                        </div>
-                        <div style="margin-bottom: 18px;">
-                            <label for="phone" style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.9rem; color: var(--jp-navy);">เบอร์โทรศัพท์</label>
-                            <input type="text" id="phone" class="form-input" placeholder="08x-xxx-xxxx" required>
-                        </div>
-                        <div style="margin-bottom: 18px;">
-                            <label for="message" style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.9rem; color: var(--jp-navy);">ข้อความที่ต้องการสอบถาม</label>
-                            <textarea id="message" class="form-input" rows="4" placeholder="สนใจสินค้าประเภทไหน หรือต้องการให้ติดต่อเรื่องอะไร..." style="border-radius: 14px;" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 25px;">ส่งข้อความ</button>
-                    </form>
-                    
-                    <div style="text-align: center; margin-top: 35px; padding-top: 25px; border-top: 1px solid #F0F2F5;">
-                        <h4 style="margin-bottom: 12px; color: var(--jp-navy);">ติดตามเราบนโซเชียลมีเดีย</h4>
-                        <div class="social-links" style="justify-content: center;">
-                            <a href="https://www.facebook.com/profile.php?id=61595247456619" target="_blank" rel="noopener" class="social-link" style="background: var(--jp-navy);">Facebook</a>
-                            <a href="tel:0801012332" class="social-link" style="background: var(--jp-red);">โทร 080-101-2332</a>
-                        </div>
-                    </div>
+                <div>
+                    <h2 style="font-size:1.3rem;margin-bottom:12px">ในร้านตอนนี้</h2>
+                    <ul class="facts-list">
+                        <li><span>เครื่องครัว & ของใช้</span><b><span data-count="kitchen">74</span> ชิ้น</b></li>
+                        <li><span>แว่นตา</span><b><span data-count="glasses">44</span> ชิ้น</b></li>
+                        <li><span>ตุ๊กตาตัวใหญ่ & หมอน</span><b><span data-count="plush-big">39</span> ชิ้น</b></li>
+                        <li><span>ตุ๊กตาคาแรกเตอร์</span><b><span data-count="plush">200</span> ชิ้น</b></li>
+                        <li><span>ตุ๊กตาเล็ก & พวงกุญแจ</span><b><span data-count="plush-small">115</span> ชิ้น</b></li>
+                    </ul>
+                    <p class="muted" style="margin-top:10px;font-size:.88rem">ไม่รวมตุ๊กตาในตะกร้า 4 ตัว 100 บาท · อัปเดต <span data-catalog-date>29 ต.ค. 2569</span></p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-container container">
-            <div class="footer-col">
-                <h3 class="footer-title">Goods Japan กูดส์ เจแปน</h3>
-                <p class="footer-text">
-                    ร้านขายของมือสองญี่ปุ่น สภาพดี มีเรื่องราว ส่งตรงจากญี่ปุ่นถึงมือคุณ 
-                    สาขาสถานีบริการน้ำมัน ปตท. (PTT Station) คลอง 4 ปทุมธานี (ใกล้ Café Amazon)
-                </p>
-                <p class="footer-text" style="margin-top: 10px; color: var(--jp-gold); font-weight: 600;">
-                    เวลาเปิดบริการ: 09:00 – 21:00 น.
-                </p>
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <h3>Goods Japan กูดส์ เจแปน</h3>
+                <p>ร้านของมือสองจากญี่ปุ่น ใน PTT Station ปตท. เลียบคลองสี่ ฝั่ง Café Amazon ตำบลคลองสี่ อำเภอคลองหลวง ปทุมธานี</p>
             </div>
-            <div class="footer-col">
-                <h3 class="footer-title">เมนูเว็บไซต์</h3>
-                <ul class="footer-links">
-                    <li><a href="index.html" class="footer-link">หน้าแรก</a></li>
-                    <li><a href="shop.html" class="footer-link">ร้านค้า & สินค้า</a></li>
-                    <li><a href="promotions.html" class="footer-link">โปรโมชั่น 11.11</a></li>
-                    <li><a href="location.html" class="footer-link">ที่ตั้งร้าน & แผนที่</a></li>
-                    <li><a href="about.html" class="footer-link">เกี่ยวกับเรา</a></li>
+            <div>
+                <h3>เวลาเปิด & ติดต่อ</h3>
+                <ul>
+                    <li>เปิด 09:00 – 21:00 น.</li>
+                    <li>โทร <a href="tel:0801012332">080-101-2332</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61595247456619" target="_blank" rel="noopener">Facebook: Goods Japan คลองสี่ ปทุมธานี</a></li>
+                    <li><a href="https://share.google/IeLH9914CwWTnxFZs" target="_blank" rel="noopener">เปิดแผนที่ Google Maps</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h3 class="footer-title">ติดต่อ & ติดตาม</h3>
-                <p class="footer-text">PTT Station ปตท. เลียบคลองสี่ ตำบลคลองสี่ อำเภอคลองหลวง จังหวัดปทุมธานี</p>
-                <p class="footer-text">โทร <a href="tel:0801012332" class="footer-link">080-101-2332</a></p>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/profile.php?id=61595247456619" target="_blank" rel="noopener" class="social-link">Facebook: Goods Japan คลองสี่ ปทุมธานี</a>
-                    <a href="https://share.google/IeLH9914CwWTnxFZs" target="_blank" rel="noopener" class="social-link">Google Maps</a>
-                </div>
+            <div>
+                <h3>เมนู</h3>
+                <ul><li><a href="index.html">หน้าแรก</a></li><li><a href="shop.html">สินค้า</a></li><li><a href="promotions.html">โปรเปิดร้าน</a></li><li><a href="location.html">ที่ตั้งร้าน</a></li><li><a href="about.html">เกี่ยวกับเรา</a></li></ul>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Goods Japan. All rights reserved. | 日本の中古品店</p>
+            <p class="copy">© 2569 Goods Japan · ราคาและสินค้าอัปเดตตามแคตตาล็อกของร้าน ของมีชิ้นเดียว อาจขายหน้าร้านไปก่อน</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
-    <script src="js/sakura.js"></script>
-    <script src="js/products.js"></script>
-    <script src="js/promotions.js"></script>
-    <script src="js/animations.js"></script>
+    <script src="js/catalog-data.js"></script>
+    <script src="js/shop.js"></script>
     <script src="js/pwa.js"></script>
 </body>
 </html>

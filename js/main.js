@@ -1,44 +1,43 @@
 /**
- * Goods Japan (กูดส์ เจแปน) - Main JavaScript
+ * Goods Japan — เมนูมือถือ + นับถอยหลังวันเปิดร้าน
  */
+(function () {
+  'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Menu Toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+  // เมนูมือถือ
+  var btn = document.querySelector('.menu-btn');
+  var nav = document.getElementById('site-nav');
+  if (btn && nav) {
+    btn.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
 
-    if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const spans = hamburger.querySelectorAll('span');
-            if (navLinks.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
-            } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
-            }
-        });
-    }
+  // นับถอยหลัง Grand Opening (7 พ.ย. 2569 09:00 น. เวลาไทย)
+  var OPEN_AT = new Date('2026-11-07T09:00:00+07:00').getTime();
+  var boxes = document.querySelectorAll('[data-countdown]');
+  if (!boxes.length) return;
 
-    // 2. Contact Form Feedback
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = contactForm.querySelector('button[type="submit"]');
-            const originalText = btn.innerText;
-            btn.disabled = true;
-            btn.innerText = 'กำลังส่งข้อมูล...';
-
-            setTimeout(() => {
-                alert('ขอบคุณสำหรับข้อความของคุณ! ทีมงาน Goods Japan จะติดต่อกลับโดยเร็วที่สุด 🌸');
-                contactForm.reset();
-                btn.disabled = false;
-                btn.innerText = originalText;
-            }, 800);
-        });
-    }
-});
+  function pad(n) { return n < 10 ? '0' + n : String(n); }
+  function tick() {
+    var left = OPEN_AT - Date.now();
+    boxes.forEach(function (box) {
+      if (left <= 0) {
+        box.innerHTML = '<p style="font-size:1.2rem;font-weight:700;color:#fff">ร้านเปิดแล้ว แวะมาได้เลย เปิด 09:00 – 21:00 น.</p>';
+        return;
+      }
+      var d = Math.floor(left / 864e5);
+      var h = Math.floor(left / 36e5) % 24;
+      var m = Math.floor(left / 6e4) % 60;
+      var s = Math.floor(left / 1e3) % 60;
+      box.innerHTML =
+        '<div><b>' + d + '</b><span>วัน</span></div>' +
+        '<div><b>' + pad(h) + '</b><span>ชั่วโมง</span></div>' +
+        '<div><b>' + pad(m) + '</b><span>นาที</span></div>' +
+        '<div><b>' + pad(s) + '</b><span>วินาที</span></div>';
+    });
+    if (left > 0) setTimeout(tick, 1000);
+  }
+  tick();
+})();

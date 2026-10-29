@@ -4,7 +4,7 @@
  * - CSS / JS / รูป: ใช้ของในเครื่องก่อน แล้วอัปเดตเบื้องหลัง
  * เวลาแก้ไฟล์เว็บแล้วอยากให้แอปโหลดของใหม่ทันที ให้เปลี่ยนเลข VERSION ด้านล่าง
  */
-const VERSION = 'gj-v2-2026-10-29';
+const VERSION = 'gj-v3-2026-10-29';
 const CORE_CACHE = `${VERSION}-core`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 
@@ -17,14 +17,10 @@ const CORE_FILES = [
   './about.html',
   './offline.html',
   './manifest.webmanifest',
-  './css/style.css',
-  './css/animations.css',
-  './css/responsive.css',
+  './css/site.css',
   './js/main.js',
-  './js/sakura.js',
-  './js/products.js',
-  './js/promotions.js',
-  './js/animations.js',
+  './js/shop.js',
+  './js/catalog-data.js',
   './js/pwa.js',
   './assets/images/logo.png',
   './assets/icons/icon-192.png',
